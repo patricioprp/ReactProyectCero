@@ -1,5 +1,4 @@
 import React from "react";
-import Carrito from "./Carrito";
 
 const Producto = ({ producto, carrito, agregarProducto, productos }) => {
   const { nombre, precio, id } = producto;
@@ -12,7 +11,7 @@ const Producto = ({ producto, carrito, agregarProducto, productos }) => {
 
   //Eliminando Producto del carrito
   const eliminarProducto = id => {
-      const producto = carrito.filter((carrito) => carrito.id !== id )[0]
+      const producto = carrito.filter((carrito) => carrito.id !== id )
       //colocar los productos en el state
     agregarProducto(producto);
   }
